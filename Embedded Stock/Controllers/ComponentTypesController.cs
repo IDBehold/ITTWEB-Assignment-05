@@ -75,6 +75,7 @@ namespace Embedded_Stock.Controllers
                     };
 
                     componentType.Categories.Add(categoryComponentType);
+                    categoryFromdb.ComponentTypes.Add(categoryComponentType);
                 }
 
                 await _context.SaveChangesAsync();

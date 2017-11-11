@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Embedded_Stock.Models.Component>
+
+@{
+    ViewData["Title"] = "ComponentList";
+}
+
+<h2>ComponentList</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ComponentNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SerialNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AdminComment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserComment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrentLoanInformationId)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComponentNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SerialNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdminComment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserComment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentLoanInformationId)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

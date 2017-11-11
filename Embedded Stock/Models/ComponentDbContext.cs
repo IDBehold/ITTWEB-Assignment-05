@@ -31,5 +31,6 @@ namespace Embedded_Stock.Models
         public DbSet<ComponentType> ComponentTypes { get; set; }
         public DbSet<Component> Components { get; set; }
         public DbSet<ESImage> EsImages { get; set; }
+        public DbSet<CategoryComponentType> CategoryComponentTypes { get; set; }
     }
 }
